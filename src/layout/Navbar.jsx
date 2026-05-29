@@ -2,18 +2,16 @@ import { useEffect, useState } from "react"
 import { Menu, X } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
 
+import LanguageSwitcher from "@/components/LanguageSwitcher"
 import { Button } from "@/components/ui/button"
 import { localizeHash, useLocale } from "@/lib/i18n"
 import { cn } from "@/lib/utils"
 
 export default function Navbar() {
-  const { content, lang, path, whatsappUrl } = useLocale()
+  const { content, path, whatsappUrl } = useLocale()
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const navItems = content.nav.items
-  const currentHash = window.location.hash
-  const englishHref = `/${currentHash}`
-  const malayHref = `/ms${currentHash}`
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 12)
@@ -63,29 +61,7 @@ export default function Navbar() {
         </div>
 
         <div className="hidden items-center justify-end gap-4 lg:flex">
-          <div className="flex items-center gap-1 text-xs font-semibold tracking-[0.16em] text-stone-500">
-            <a
-              href={englishHref}
-              aria-label={content.nav.switchToEnglish}
-              className={cn(
-                "transition-colors duration-300 hover:text-stone-950",
-                lang === "en" ? "text-stone-950" : "text-stone-500"
-              )}
-            >
-              EN
-            </a>
-            <span className="text-stone-400">|</span>
-            <a
-              href={malayHref}
-              aria-label={content.nav.switchToMalay}
-              className={cn(
-                "transition-colors duration-300 hover:text-stone-950",
-                lang === "ms" ? "text-stone-950" : "text-stone-500"
-              )}
-            >
-              BM
-            </a>
-          </div>
+          <LanguageSwitcher />
           <Button
             asChild
             className="h-11 rounded-full bg-stone-950 px-6 text-sm text-white shadow-[0_14px_30px_rgba(28,25,23,0.14)] transition duration-300 hover:-translate-y-0.5 hover:bg-stone-800 hover:shadow-[0_18px_38px_rgba(28,25,23,0.18)]"
@@ -132,29 +108,7 @@ export default function Navbar() {
                 </a>
               ))}
 
-              <div className="flex items-center gap-1 px-4 py-3 text-xs font-semibold tracking-[0.16em] text-stone-500">
-                <a
-                  href={englishHref}
-                  aria-label={content.nav.switchToEnglish}
-                  className={cn(
-                    "transition-colors duration-300 hover:text-stone-950",
-                    lang === "en" ? "text-stone-950" : "text-stone-500"
-                  )}
-                >
-                  EN
-                </a>
-                <span className="text-stone-400">|</span>
-                <a
-                  href={malayHref}
-                  aria-label={content.nav.switchToMalay}
-                  className={cn(
-                    "transition-colors duration-300 hover:text-stone-950",
-                    lang === "ms" ? "text-stone-950" : "text-stone-500"
-                  )}
-                >
-                  BM
-                </a>
-              </div>
+              <LanguageSwitcher className="px-4 py-3" />
 
               <Button
                 asChild
