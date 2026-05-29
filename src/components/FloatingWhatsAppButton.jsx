@@ -1,12 +1,11 @@
 import { MessageCircle } from "lucide-react"
 
-const whatsappHref =
-  "https://wa.me/?text=Hi%20Rivyl%20Flooring%20Studio%2C%20I%27d%20like%20to%20ask%20about%20a%20flooring%20quotation."
+import { WHATSAPP_URL } from "@/lib/constants"
 
 export default function FloatingWhatsAppButton() {
   return (
     <a
-      href={whatsappHref}
+      href={WHATSAPP_URL}
       target="_blank"
       rel="noreferrer"
       aria-label="WhatsApp Rivyl Flooring Studio for a quotation"

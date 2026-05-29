@@ -3,6 +3,7 @@ import { Menu, X } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
 
 import { Button } from "@/components/ui/button"
+import { WHATSAPP_URL } from "@/lib/constants"
 import { cn } from "@/lib/utils"
 
 const navItems = ["Home", "Portfolio", "Services", "Contact"]
@@ -64,7 +65,7 @@ export default function Navbar() {
             className="h-11 rounded-full bg-stone-950 px-6 text-sm text-white shadow-[0_14px_30px_rgba(28,25,23,0.14)] transition duration-300 hover:-translate-y-0.5 hover:bg-stone-800 hover:shadow-[0_18px_38px_rgba(28,25,23,0.18)]"
           >
             <a
-              href="https://wa.me/?text=Hi%20Rivyl%20Flooring%20Studio%2C%20I%27d%20like%20to%20ask%20about%20a%20flooring%20quotation."
+              href={WHATSAPP_URL}
               target="_blank"
               rel="noreferrer"
             >
@@ -110,7 +111,7 @@ export default function Navbar() {
                 className="mt-3 h-12 rounded-full bg-stone-950 text-sm text-white shadow-[0_16px_32px_rgba(28,25,23,0.14)] transition duration-300 hover:bg-stone-800"
               >
                 <a
-                  href="https://wa.me/?text=Hi%20Rivyl%20Flooring%20Studio%2C%20I%27d%20like%20to%20ask%20about%20a%20flooring%20quotation."
+                  href={WHATSAPP_URL}
                   target="_blank"
                   rel="noreferrer"
                   onClick={() => setIsMenuOpen(false)}

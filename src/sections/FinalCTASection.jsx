@@ -2,6 +2,7 @@ import { ArrowRight, MessageCircle } from "lucide-react"
 import { motion } from "framer-motion"
 
 import { Button } from "@/components/ui/button"
+import { WHATSAPP_URL } from "@/lib/constants"
 
 export default function FinalCTASection() {
   return (
@@ -33,7 +34,7 @@ export default function FinalCTASection() {
               className="h-12 rounded-full bg-white px-7 text-sm text-stone-950 shadow-[0_16px_36px_rgba(0,0,0,0.2)] transition duration-300 hover:-translate-y-0.5 hover:bg-stone-100"
             >
               <a
-                href="https://wa.me/?text=Hi%20Rivyl%20Flooring%20Studio%2C%20I%27d%20like%20a%20flooring%20quotation."
+                href={WHATSAPP_URL}
                 target="_blank"
                 rel="noreferrer"
               >
