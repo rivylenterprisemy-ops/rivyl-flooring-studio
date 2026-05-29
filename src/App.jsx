@@ -1,5 +1,10 @@
 import HomePage from "@/pages/HomePage"
+import { LocaleProvider } from "@/lib/i18n"
 
 export default function App() {
-  return <HomePage />
+  return (
+    <LocaleProvider>
+      <HomePage />
+    </LocaleProvider>
+  )
 }

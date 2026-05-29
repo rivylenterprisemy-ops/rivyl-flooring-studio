@@ -3,8 +3,11 @@ import { motion } from "framer-motion"
 
 import craftsmanshipProcess from "@/assets/projects/craftsmanship-process-premium-v2.jpg"
 import heroFlooring from "@/assets/projects/hero-flooring.jpg"
+import { useLocale } from "@/lib/i18n"
 
 export default function BeforeAfterSection() {
+  const { content } = useLocale()
+  const { beforeAfter } = content
   const [position, setPosition] = useState(58)
 
   return (
@@ -18,14 +21,13 @@ export default function BeforeAfterSection() {
           className="mb-8 max-w-[42rem]"
         >
           <p className="mb-4 text-xs font-semibold uppercase tracking-[0.3em] text-stone-500">
-            Craftsmanship Journey
+            {beforeAfter.eyebrow}
           </p>
           <h2 className="font-['Playfair_Display'] text-4xl font-semibold leading-tight text-stone-950 sm:text-[2.9rem]">
-            From precise craftsmanship to a polished finish
+            {beforeAfter.title}
           </h2>
           <p className="mt-5 max-w-[35rem] text-base leading-8 text-stone-600">
-            Compare the installation process with the final completed flooring
-            result to see the attention to detail behind every project.
+            {beforeAfter.copy}
           </p>
         </motion.div>
 
@@ -39,7 +41,7 @@ export default function BeforeAfterSection() {
           <div className="relative overflow-hidden rounded-[1.25rem]">
             <img
               src={craftsmanshipProcess}
-              alt="In-progress porcelain tile installation with alignment spacers and workmanship detail"
+              alt={beforeAfter.processAlt}
               className="aspect-[4/5] w-full object-cover object-[62%_58%] brightness-[0.84] saturate-[0.82] sm:aspect-[16/9] sm:object-[58%_58%] lg:aspect-[16/7.5]"
             />
             <div className="absolute inset-0 bg-[#3c2f22]/16" />
@@ -49,7 +51,7 @@ export default function BeforeAfterSection() {
             >
               <img
                 src={heroFlooring}
-                alt="Completed apartment porcelain tile flooring after renewal"
+                alt={beforeAfter.completedAlt}
                 className="aspect-[4/5] h-full w-full object-cover object-[center_76%] brightness-[1.04] saturate-[0.9] sm:aspect-[16/9] sm:object-[center_74%] lg:aspect-[16/7.5]"
               />
             </div>
@@ -57,10 +59,10 @@ export default function BeforeAfterSection() {
             <div className="absolute inset-0 bg-[#eadfce]/8" />
 
             <div className="absolute left-4 top-4 rounded-full bg-[#f8f4ee]/72 px-3 py-1 text-[0.64rem] font-medium uppercase tracking-[0.22em] text-stone-700">
-              Completed
+              {beforeAfter.completed}
             </div>
             <div className="absolute right-4 top-4 rounded-full bg-[#f8f4ee]/72 px-3 py-1 text-[0.64rem] font-medium uppercase tracking-[0.22em] text-stone-700">
-              In Progress
+              {beforeAfter.inProgress}
             </div>
 
             <div
@@ -78,7 +80,7 @@ export default function BeforeAfterSection() {
               min="8"
               max="92"
               value={position}
-              aria-label="Drag to compare in-progress craftsmanship and completed flooring result"
+              aria-label={beforeAfter.rangeLabel}
               onChange={(event) => setPosition(Number(event.target.value))}
               className="absolute inset-0 h-full w-full touch-pan-y cursor-ew-resize opacity-0"
             />

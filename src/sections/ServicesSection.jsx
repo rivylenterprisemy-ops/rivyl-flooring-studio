@@ -2,35 +2,27 @@ import { ClipboardCheck, Grid2X2, Layers3, Ruler } from "lucide-react"
 import { motion } from "framer-motion"
 
 import livingAngle from "@/assets/projects/living-angle.jpg"
+import { useLocale } from "@/lib/i18n"
 
-const services = [
+const serviceIcons = [
   {
-    title: "Tile Installation",
-    description:
-      "Professional installation for new homes, renovations and extensions.",
     icon: Grid2X2,
   },
   {
-    title: "Tile Replacement",
-    description:
-      "Replace cracked, damaged or outdated tiles with precision matching.",
     icon: Layers3,
   },
   {
-    title: "Surface Preparation",
-    description:
-      "Proper floor preparation ensures long-lasting results and level installation.",
     icon: Ruler,
   },
   {
-    title: "Consultation & Quotation",
-    description:
-      "Advice on tile selection, layout planning and material estimation.",
     icon: ClipboardCheck,
   },
 ]
 
 export default function ServicesSection() {
+  const { content } = useLocale()
+  const { services } = content
+
   return (
     <section id="services" className="bg-[#eee7dd] px-5 py-18 sm:px-8 sm:py-22 lg:px-10 lg:py-26">
       <div className="mx-auto max-w-7xl">
@@ -43,10 +35,10 @@ export default function ServicesSection() {
             className="max-w-[34rem]"
           >
             <p className="mb-4 text-xs font-semibold uppercase tracking-[0.3em] text-stone-500">
-              Services
+              {services.eyebrow}
             </p>
             <h2 className="font-['Playfair_Display'] text-4xl font-semibold leading-tight text-stone-950 sm:text-[2.9rem]">
-              Practical flooring services for refined homes
+              {services.title}
             </h2>
           </motion.div>
 
@@ -59,7 +51,7 @@ export default function ServicesSection() {
           >
             <img
               src={livingAngle}
-              alt="Apartment floor tile surface and skirting finish"
+              alt={services.imageAlt}
               className="h-48 w-full rounded-[1.25rem] object-cover object-[center_76%] saturate-[0.88]"
             />
             <div className="absolute inset-2 rounded-[1.25rem] bg-[#eadfce]/12" />
@@ -67,8 +59,8 @@ export default function ServicesSection() {
         </div>
 
         <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {services.map((service, index) => {
-            const Icon = service.icon
+          {services.items.map((service, index) => {
+            const Icon = serviceIcons[index].icon
 
             return (
               <motion.article

@@ -8,34 +8,33 @@ import {
 } from "lucide-react"
 import { motion } from "framer-motion"
 
-const workmanshipItems = [
+import { useLocale } from "@/lib/i18n"
+
+const workmanshipIcons = [
   {
-    title: "Precision Tile Levelling System",
     icon: Ruler,
   },
   {
-    title: "Clean & Professional Workmanship",
     icon: Sparkles,
   },
   {
-    title: "Transparent Quotations",
     icon: ClipboardList,
   },
   {
-    title: "Residential & Commercial Projects",
     icon: Building2,
   },
   {
-    title: "Attention To Detail",
     icon: BadgeCheck,
   },
   {
-    title: "Reliable Project Communication",
     icon: MessagesSquare,
   },
 ]
 
 export default function WhyRivylSection() {
+  const { content } = useLocale()
+  const { why } = content
+
   return (
     <section className="bg-[#f4efe7] px-5 py-16 sm:px-8 sm:py-20 lg:px-10 lg:py-24">
       <div className="mx-auto max-w-7xl">
@@ -47,21 +46,21 @@ export default function WhyRivylSection() {
           className="max-w-[42rem]"
         >
           <p className="mb-4 text-xs font-semibold uppercase tracking-[0.3em] text-stone-500">
-            Trust & Workmanship
+            {why.eyebrow}
           </p>
           <h2 className="max-w-[36rem] font-['Playfair_Display'] text-4xl font-semibold leading-tight text-stone-950 sm:text-[2.9rem]">
-            Why Homeowners Choose{" "}
-            <span className="inline-block">Rivyl Flooring Studio</span>
+            {why.titlePrefix}{" "}
+            <span className="inline-block">{why.brand}</span>
           </h2>
         </motion.div>
 
         <div className="mt-10 grid gap-4 md:grid-cols-2">
-          {workmanshipItems.map((item, index) => {
-            const Icon = item.icon
+          {why.items.map((item, index) => {
+            const Icon = workmanshipIcons[index].icon
 
             return (
               <motion.article
-                key={item.title}
+                key={item}
                 initial={{ opacity: 0, y: 18 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.25 }}
@@ -71,7 +70,7 @@ export default function WhyRivylSection() {
                 <div className="flex size-10 shrink-0 items-center justify-center rounded-full border border-stone-300/80 bg-[#f4efe7] text-stone-900">
                   <Icon className="size-4" />
                 </div>
-                <h3 className="text-base font-semibold text-stone-950">{item.title}</h3>
+                <h3 className="text-base font-semibold text-stone-950">{item}</h3>
               </motion.article>
             )
           })}

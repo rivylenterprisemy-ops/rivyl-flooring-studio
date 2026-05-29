@@ -3,21 +3,17 @@ import { motion } from "framer-motion"
 
 import heroFlooring from "@/assets/projects/hero-flooring.jpg"
 import { Button } from "@/components/ui/button"
-import { WHATSAPP_URL } from "@/lib/constants"
+import { localizeHash, useLocale } from "@/lib/i18n"
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
   visible: { opacity: 1, y: 0 },
 }
 
-const featureItems = [
-  "Precision Tile Installation",
-  "Premium Surface Finishes",
-  "Apartment Flooring Specialists",
-  "Modern Porcelain & Marble Looks",
-]
-
 export default function HeroSection() {
+  const { content, path, whatsappUrl } = useLocale()
+  const { hero } = content
+
   return (
     <section
       id="home"
@@ -35,7 +31,7 @@ export default function HeroSection() {
             transition={{ duration: 0.55, ease: "easeOut" }}
             className="mb-5 text-xs font-semibold uppercase tracking-[0.3em] text-stone-500"
           >
-            RIVYL FLOORING STUDIO
+            {hero.eyebrow}
           </motion.p>
 
           <motion.h1
@@ -43,7 +39,7 @@ export default function HeroSection() {
             transition={{ duration: 0.65, ease: "easeOut" }}
             className="font-['Playfair_Display'] text-[2.55rem] font-semibold leading-[1.1] text-stone-950 sm:text-[3.15rem] lg:text-[3.35rem] xl:text-[3.72rem]"
           >
-            Refined Flooring Transformations For Modern Homes
+            {hero.title}
           </motion.h1>
 
           <motion.p
@@ -51,8 +47,7 @@ export default function HeroSection() {
             transition={{ duration: 0.65, ease: "easeOut" }}
             className="mt-7 max-w-[33rem] text-base leading-8 text-stone-600"
           >
-            Premium tile replacement and surface renewal crafted for apartments,
-            homes and modern living spaces.
+            {hero.copy}
           </motion.p>
 
           <motion.div
@@ -65,11 +60,11 @@ export default function HeroSection() {
               className="h-12 rounded-full bg-stone-950 px-7 text-sm text-white shadow-[0_18px_38px_rgba(28,25,23,0.17)] transition duration-300 hover:-translate-y-0.5 hover:bg-stone-800 hover:shadow-[0_22px_46px_rgba(28,25,23,0.2)]"
             >
               <a
-                href={WHATSAPP_URL}
+                href={whatsappUrl}
                 target="_blank"
                 rel="noreferrer"
               >
-                Get Quotation
+                {hero.quotation}
                 <ArrowRight className="ml-2 size-4" />
               </a>
             </Button>
@@ -79,7 +74,7 @@ export default function HeroSection() {
               variant="outline"
               className="h-12 rounded-full border-stone-300/70 bg-transparent px-7 text-sm text-stone-800 shadow-none backdrop-blur-sm transition duration-300 hover:-translate-y-0.5 hover:bg-white/45 hover:text-stone-950"
             >
-              <a href="#portfolio">See Project Work</a>
+              <a href={localizeHash("#portfolio", path)}>{hero.projectWork}</a>
             </Button>
           </motion.div>
         </motion.div>
@@ -98,7 +93,7 @@ export default function HeroSection() {
             <div className="relative overflow-hidden rounded-[1.25rem]">
               <img
                 src={heroFlooring}
-                alt="Rivyl apartment flooring project with reflective porcelain-look tiles"
+                alt={hero.imageAlt}
                 className="aspect-[4/5] w-full scale-[1.05] object-cover object-[center_74%] saturate-[0.82] sm:aspect-[16/12] sm:scale-[1.02] lg:aspect-[4/5] lg:scale-[1.06]"
               />
               <div className="absolute inset-0 bg-[#eadfce]/18" />
@@ -112,7 +107,7 @@ export default function HeroSection() {
             className="absolute bottom-5 left-5 right-5 rounded-3xl border border-stone-200/75 bg-[#f8f4ee]/92 p-4 shadow-[0_16px_38px_rgba(39,32,24,0.1)] sm:bottom-7 sm:left-auto sm:right-7 sm:w-72"
           >
             <div className="grid gap-2.5">
-              {featureItems.map((item) => (
+              {hero.features.map((item) => (
                 <div key={item} className="flex items-center gap-2.5 text-[0.82rem] font-medium text-stone-800">
                   <span className="flex size-5 items-center justify-center rounded-full bg-stone-950 text-white">
                     <Check className="size-3" />

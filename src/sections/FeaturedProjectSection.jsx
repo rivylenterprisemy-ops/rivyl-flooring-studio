@@ -5,64 +5,24 @@ import corridorFlooring from "@/assets/projects/corridor-flooring.jpg"
 import flooringDetail from "@/assets/projects/flooring-detail.jpg"
 import heroFlooring from "@/assets/projects/hero-flooring.jpg"
 import livingAngle from "@/assets/projects/living-angle.jpg"
+import { useLocale } from "@/lib/i18n"
 
-const filters = ["All Projects", "Living Room", "Kitchen", "Corridor", "Commercial"]
-
-const projects = [
+const projectImages = [
   {
-    title: "Apartment Flooring Transformation",
-    location: "Taman Universiti, Johor Bahru",
-    tileType: "600x600 Marble-Look Porcelain",
-    scope: "Living Room + Corridor",
-    status: "Completed",
-    category: "Living Room",
     image: heroFlooring,
     imagePosition: "object-[center_74%]",
   },
   {
-    title: "Corridor Tile Renewal",
-    location: "Johor Bahru Apartment",
-    tileType: "600x600 Light Porcelain Tile",
-    scope: "Corridor + Threshold Areas",
-    status: "Completed",
-    category: "Corridor",
     image: corridorFlooring,
     imagePosition: "object-[center_72%]",
   },
   {
-    title: "Kitchen Surface Continuation",
-    location: "Johor Bahru Home",
-    tileType: "Marble-Look Porcelain Finish",
-    scope: "Kitchen Entry + Living Edge",
-    status: "Completed",
-    category: "Kitchen",
     image: livingAngle,
     imagePosition: "object-[center_76%]",
   },
   {
-    title: "Commercial Floor Finish",
-    location: "Johor Bahru",
-    tileType: "Polished Porcelain Surface",
-    scope: "Open Floor Area",
-    status: "Completed",
-    category: "Commercial",
     image: flooringDetail,
     imagePosition: "object-[center_74%]",
-  },
-]
-
-const proofItems = [
-  {
-    label: "Completed Projects",
-    value: "Real flooring work",
-  },
-  {
-    label: "Satisfied Clients",
-    value: "Direct homeowner handovers",
-  },
-  {
-    label: "Years Experience",
-    value: "Practical renovation sites",
   },
 ]
 
@@ -72,15 +32,25 @@ const fadeUp = {
 }
 
 export default function FeaturedProjectSection() {
-  const [activeFilter, setActiveFilter] = useState("All Projects")
+  const { content } = useLocale()
+  const { portfolio } = content
+  const [activeFilter, setActiveFilter] = useState(portfolio.allProjects)
+  const projects = useMemo(
+    () =>
+      portfolio.projects.map((project, index) => ({
+        ...project,
+        ...projectImages[index],
+      })),
+    [portfolio.projects]
+  )
 
   const visibleProjects = useMemo(() => {
-    if (activeFilter === "All Projects") {
+    if (activeFilter === portfolio.allProjects) {
       return projects
     }
 
     return projects.filter((project) => project.category === activeFilter)
-  }, [activeFilter])
+  }, [activeFilter, portfolio.allProjects, projects])
 
   return (
     <section id="portfolio" className="bg-[#f4efe7] px-5 py-18 sm:px-8 sm:py-22 lg:px-10 lg:py-26">
@@ -98,7 +68,7 @@ export default function FeaturedProjectSection() {
               transition={{ duration: 0.55, ease: "easeOut" }}
               className="mb-4 text-xs font-semibold uppercase tracking-[0.3em] text-stone-500"
             >
-              Project Portfolio
+              {portfolio.eyebrow}
             </motion.p>
 
             <motion.h2
@@ -106,7 +76,7 @@ export default function FeaturedProjectSection() {
               transition={{ duration: 0.6, ease: "easeOut" }}
               className="font-['Playfair_Display'] text-4xl font-semibold leading-tight text-stone-950 sm:text-[2.9rem] lg:text-[3.05rem]"
             >
-              Completed flooring projects with practical finishing detail
+              {portfolio.title}
             </motion.h2>
 
             <motion.p
@@ -114,8 +84,7 @@ export default function FeaturedProjectSection() {
               transition={{ duration: 0.6, ease: "easeOut" }}
               className="mt-6 max-w-[35rem] text-base leading-8 text-stone-600"
             >
-              A closer look at real apartment flooring work, tile selection,
-              alignment and finishing scopes completed around Johor Bahru.
+              {portfolio.copy}
             </motion.p>
           </div>
 
@@ -124,7 +93,7 @@ export default function FeaturedProjectSection() {
             transition={{ duration: 0.6, ease: "easeOut" }}
             className="grid gap-px overflow-hidden rounded-3xl border border-stone-200/70 bg-stone-200/70 shadow-[0_10px_28px_rgba(39,32,24,0.05)] sm:grid-cols-3"
           >
-            {proofItems.map((item) => (
+            {portfolio.proofItems.map((item) => (
               <div key={item.label} className="bg-[#f8f4ee] px-5 py-4">
                 <p className="text-xs font-semibold uppercase tracking-[0.2em] text-stone-500">
                   {item.label}
@@ -136,7 +105,7 @@ export default function FeaturedProjectSection() {
         </motion.div>
 
         <div className="mt-10 flex gap-2 overflow-x-auto pb-2 sm:flex-wrap sm:overflow-visible sm:pb-0">
-          {filters.map((filter) => {
+          {portfolio.filters.map((filter) => {
             const isActive = activeFilter === filter
 
             return (
@@ -191,14 +160,14 @@ export default function FeaturedProjectSection() {
                 <dl className="mt-5 grid gap-3 text-sm">
                   <div>
                     <dt className="text-xs font-semibold uppercase tracking-[0.18em] text-stone-500">
-                      Tile Type
+                      {portfolio.labels.tileType}
                     </dt>
                     <dd className="mt-1 text-stone-800">{project.tileType}</dd>
                   </div>
 
                   <div>
                     <dt className="text-xs font-semibold uppercase tracking-[0.18em] text-stone-500">
-                      Scope
+                      {portfolio.labels.scope}
                     </dt>
                     <dd className="mt-1 text-stone-800">{project.scope}</dd>
                   </div>
