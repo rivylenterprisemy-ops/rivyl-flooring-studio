@@ -11,7 +11,7 @@ export default function FinalCTASection() {
   const { cta } = content
 
   return (
-    <section id="contact" className="bg-[#f4efe7] px-5 pb-18 pt-10 sm:px-8 sm:pb-24 lg:px-10 lg:pb-28">
+    <section id="contact" className="scroll-mt-[100px] bg-[#f4efe7] px-5 pb-18 pt-10 sm:px-8 sm:pb-24 lg:px-10 lg:pb-28">
       <motion.div
         initial={{ opacity: 0, y: 24 }}
         whileInView={{ opacity: 1, y: 0 }}

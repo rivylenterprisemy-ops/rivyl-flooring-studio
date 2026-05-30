@@ -24,7 +24,7 @@ export default function ServicesSection() {
   const { services } = content
 
   return (
-    <section id="services" className="bg-[#eee7dd] px-5 py-18 sm:px-8 sm:py-22 lg:px-10 lg:py-26">
+    <section id="services" className="scroll-mt-[100px] bg-[#eee7dd] px-5 py-18 sm:px-8 sm:py-22 lg:px-10 lg:py-26">
       <div className="mx-auto max-w-7xl">
         <div className="grid gap-10 lg:grid-cols-[0.74fr_1.26fr] lg:items-end">
           <motion.div

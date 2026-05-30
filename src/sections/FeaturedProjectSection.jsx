@@ -53,7 +53,7 @@ export default function FeaturedProjectSection() {
   }, [activeFilter, portfolio.allProjects, projects])
 
   return (
-    <section id="portfolio" className="bg-[#f4efe7] px-5 py-18 sm:px-8 sm:py-22 lg:px-10 lg:py-26">
+    <section id="portfolio" className="scroll-mt-[100px] bg-[#f4efe7] px-5 py-18 sm:px-8 sm:py-22 lg:px-10 lg:py-26">
       <div className="mx-auto max-w-7xl">
         <motion.div
           initial="hidden"

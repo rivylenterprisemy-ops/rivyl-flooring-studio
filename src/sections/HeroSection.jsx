@@ -17,7 +17,7 @@ export default function HeroSection() {
   return (
     <section
       id="home"
-      className="relative isolate overflow-hidden bg-[#f4efe7] px-5 pb-16 pt-32 sm:px-8 sm:pb-20 sm:pt-36 lg:min-h-[90vh] lg:px-10 lg:pb-20 lg:pt-36"
+      className="relative isolate scroll-mt-[100px] overflow-hidden bg-[#f4efe7] px-5 pb-16 pt-32 sm:px-8 sm:pb-20 sm:pt-36 lg:min-h-[90vh] lg:px-10 lg:pb-20 lg:pt-36"
     >
       <div className="mx-auto grid max-w-7xl items-center gap-14 lg:grid-cols-[0.95fr_0.98fr] lg:gap-18 xl:gap-22">
         <motion.div
