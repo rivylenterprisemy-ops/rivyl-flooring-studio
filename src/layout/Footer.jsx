@@ -29,7 +29,7 @@ export default function Footer() {
             <p className="mt-4 text-sm leading-7 text-stone-600">
               {footer.location}
             </p>
-            <div className="mt-3 flex flex-col items-start gap-2 md:flex-row md:items-center md:gap-4">
+            <div className="mt-3 flex flex-col items-start gap-2">
               <a
                 href={whatsappUrl}
                 target="_blank"
