@@ -29,23 +29,25 @@ export default function Footer() {
             <p className="mt-4 text-sm leading-7 text-stone-600">
               {footer.location}
             </p>
-            <a
-              href={whatsappUrl}
-              target="_blank"
-              rel="noreferrer"
-              className="mt-3 inline-flex items-center gap-2 text-sm font-medium text-stone-950 transition duration-300 hover:text-stone-700"
-            >
-              <MessageCircle className="size-4" />
-              WhatsApp
-            </a>
-            <button
-              type="button"
-              className="mt-2 inline-flex items-center gap-2 text-sm font-medium text-stone-700 transition duration-300 hover:text-stone-950 md:mt-3"
-              onClick={openCallbackRequest}
-            >
-              <PhoneCall className="size-4" />
-              {footer.callback}
-            </button>
+            <div className="mt-3 flex flex-col items-start gap-2 md:flex-row md:items-center md:gap-4">
+              <a
+                href={whatsappUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 text-sm font-medium text-stone-950 transition duration-300 hover:text-stone-700"
+              >
+                <MessageCircle className="size-4" />
+                WhatsApp
+              </a>
+              <button
+                type="button"
+                className="inline-flex items-center gap-2 text-sm font-medium text-stone-700 transition duration-300 hover:text-stone-950"
+                onClick={openCallbackRequest}
+              >
+                <PhoneCall className="size-4" />
+                {footer.callback}
+              </button>
+            </div>
           </div>
 
           <div>
