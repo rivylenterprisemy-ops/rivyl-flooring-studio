@@ -40,7 +40,7 @@ export default function Footer() {
             </a>
             <button
               type="button"
-              className="mt-3 inline-flex items-center gap-2 text-sm font-medium text-stone-700 transition duration-300 hover:text-stone-950"
+              className="mt-2 inline-flex items-center gap-2 text-sm font-medium text-stone-700 transition duration-300 hover:text-stone-950 md:mt-3"
               onClick={openCallbackRequest}
             >
               <PhoneCall className="size-4" />
