@@ -1,9 +1,11 @@
-import { MessageCircle } from "lucide-react"
+import { MessageCircle, PhoneCall } from "lucide-react"
 
+import { useCallbackRequest } from "@/components/CallbackRequest"
 import { localizeHash, useLocale } from "@/lib/i18n"
 
 export default function Footer() {
   const { content, path, whatsappUrl } = useLocale()
+  const { openCallbackRequest } = useCallbackRequest()
   const { footer } = content
 
   return (
@@ -36,6 +38,14 @@ export default function Footer() {
               <MessageCircle className="size-4" />
               WhatsApp
             </a>
+            <button
+              type="button"
+              className="mt-3 inline-flex items-center gap-2 text-sm font-medium text-stone-700 transition duration-300 hover:text-stone-950"
+              onClick={openCallbackRequest}
+            >
+              <PhoneCall className="size-4" />
+              {footer.callback}
+            </button>
           </div>
 
           <div>

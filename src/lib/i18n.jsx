@@ -178,6 +178,7 @@ const dictionaries = {
       copy:
         "Share your floor area, photos and location. We'll guide you with tile selection, scope and quotation.",
       whatsapp: "Send Floor Photos",
+      callback: "Request a Callback",
       projectWork: "See Project Work",
     },
     footer: {
@@ -201,6 +202,27 @@ const dictionaries = {
       ],
       brandLine: "Rivyl Flooring Studio is a service brand of Rivyl Enterprise.",
       copyright: "Copyright (c) 2026 Rivyl Enterprise. All rights reserved.",
+      callback: "Request a Callback",
+    },
+    callback: {
+      eyebrow: "Request a Callback",
+      title: "Request a Callback",
+      close: "Close callback request",
+      fields: {
+        fullName: "Full Name",
+        phoneNumber: "Phone Number",
+        preferredCallTime: "Preferred Call Time",
+        message: "Brief Message",
+      },
+      submit: "Submit Request",
+      sending: "Submitting...",
+      cancel: "Cancel",
+      success: "Thank you. We will contact you as soon as possible.",
+      failure: "Unable to submit your request. Please try WhatsApp instead.",
+      validation: {
+        nameRequired: "Please enter your full name.",
+        phoneRequired: "Please enter your phone number.",
+      },
     },
     floatingWhatsAppAria: "WhatsApp Rivyl Flooring Studio for a quotation",
   },
@@ -378,6 +400,7 @@ const dictionaries = {
       copy:
         "Kongsi keluasan lantai, gambar dan lokasi anda. Kami akan bantu dengan pilihan jubin, skop dan sebut harga.",
       whatsapp: "Hantar Gambar Lantai",
+      callback: "Minta Panggilan Balik",
       projectWork: "Lihat Projek",
     },
     footer: {
@@ -401,6 +424,27 @@ const dictionaries = {
       ],
       brandLine: "Rivyl Flooring Studio ialah jenama servis Rivyl Enterprise.",
       copyright: "Hak cipta (c) 2026 Rivyl Enterprise. Semua hak terpelihara.",
+      callback: "Minta Panggilan Balik",
+    },
+    callback: {
+      eyebrow: "Minta Panggilan Balik",
+      title: "Minta Panggilan Balik",
+      close: "Tutup borang panggilan balik",
+      fields: {
+        fullName: "Nama Penuh",
+        phoneNumber: "Nombor Telefon",
+        preferredCallTime: "Masa Pilihan Untuk Dihubungi",
+        message: "Ringkasan Pertanyaan",
+      },
+      submit: "Hantar Permintaan",
+      sending: "Menghantar...",
+      cancel: "Batal",
+      success: "Terima kasih. Kami akan menghubungi anda secepat mungkin.",
+      failure: "Permintaan tidak dapat dihantar. Sila gunakan WhatsApp sebagai alternatif.",
+      validation: {
+        nameRequired: "Sila masukkan nama penuh anda.",
+        phoneRequired: "Sila masukkan nombor telefon anda.",
+      },
     },
     floatingWhatsAppAria:
       "WhatsApp Rivyl Flooring Studio untuk sebut harga",

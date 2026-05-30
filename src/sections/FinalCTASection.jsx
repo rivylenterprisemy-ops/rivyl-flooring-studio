@@ -1,11 +1,13 @@
-import { ArrowRight, MessageCircle } from "lucide-react"
+import { ArrowRight, MessageCircle, PhoneCall } from "lucide-react"
 import { motion } from "framer-motion"
 
+import { useCallbackRequest } from "@/components/CallbackRequest"
 import { Button } from "@/components/ui/button"
 import { localizeHash, useLocale } from "@/lib/i18n"
 
 export default function FinalCTASection() {
   const { content, path, whatsappUrl } = useLocale()
+  const { openCallbackRequest } = useCallbackRequest()
   const { cta } = content
 
   return (
@@ -43,6 +45,16 @@ export default function FinalCTASection() {
                 <MessageCircle className="mr-2 size-4" />
                 {cta.whatsapp}
               </a>
+            </Button>
+
+            <Button
+              type="button"
+              variant="outline"
+              className="h-12 rounded-full border-white/25 bg-transparent px-7 text-sm text-white shadow-none transition duration-300 hover:-translate-y-0.5 hover:bg-white/10 hover:text-white"
+              onClick={openCallbackRequest}
+            >
+              <PhoneCall className="mr-2 size-4" />
+              {cta.callback}
             </Button>
 
             <Button
