@@ -42,7 +42,7 @@ export default function Navbar() {
       <nav className="mx-auto grid h-20 max-w-7xl grid-cols-[1fr_auto] items-center px-5 sm:px-8 lg:grid-cols-[1fr_auto_1fr] lg:gap-10 xl:px-0">
         <a
           href={localizeHash("#home", path)}
-          className="font-['Playfair_Display'] text-[1.15rem] font-normal tracking-wide text-stone-950 transition-colors duration-300 hover:text-stone-700 sm:text-[1.32rem]"
+          className="min-w-0 truncate pr-3 font-['Playfair_Display'] text-[1.15rem] font-normal tracking-wide text-stone-950 transition-colors duration-300 hover:text-stone-700 sm:text-[1.32rem] lg:pr-0"
           aria-label={content.nav.homeAria}
         >
           Rivyl Flooring Studio
@@ -76,15 +76,18 @@ export default function Navbar() {
           </Button>
         </div>
 
-        <button
-          type="button"
-          className="inline-flex size-11 items-center justify-center justify-self-end rounded-full border border-stone-300/70 bg-white/55 text-stone-950 shadow-sm backdrop-blur-md transition duration-300 hover:bg-white lg:hidden"
-          onClick={() => setIsMenuOpen((current) => !current)}
-          aria-label={isMenuOpen ? content.nav.closeMenu : content.nav.openMenu}
-          aria-expanded={isMenuOpen}
-        >
-          {isMenuOpen ? <X className="size-5" /> : <Menu className="size-5" />}
-        </button>
+        <div className="flex items-center justify-end gap-3 lg:hidden">
+          <LanguageSwitcher />
+          <button
+            type="button"
+            className="inline-flex size-11 items-center justify-center rounded-full border border-stone-300/70 bg-white/55 text-stone-950 shadow-sm backdrop-blur-md transition duration-300 hover:bg-white"
+            onClick={() => setIsMenuOpen((current) => !current)}
+            aria-label={isMenuOpen ? content.nav.closeMenu : content.nav.openMenu}
+            aria-expanded={isMenuOpen}
+          >
+            {isMenuOpen ? <X className="size-5" /> : <Menu className="size-5" />}
+          </button>
+        </div>
       </nav>
 
       <AnimatePresence>
@@ -107,8 +110,6 @@ export default function Navbar() {
                   {item.label}
                 </a>
               ))}
-
-              <LanguageSwitcher className="px-4 py-3" />
 
               <Button
                 asChild
