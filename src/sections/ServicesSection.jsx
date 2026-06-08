@@ -1,4 +1,4 @@
-import { ClipboardCheck, Grid2X2, Layers3, Ruler } from "lucide-react"
+import { ClipboardCheck, Grid2X2, Layers3, Paintbrush, PlugZap, Ruler } from "lucide-react"
 import { motion } from "framer-motion"
 
 import livingAngle from "@/assets/projects/living-angle.jpg"
@@ -16,6 +16,12 @@ const serviceIcons = [
   },
   {
     icon: ClipboardCheck,
+  },
+  {
+    icon: Paintbrush,
+  },
+  {
+    icon: PlugZap,
   },
 ]
 
@@ -60,7 +66,7 @@ export default function ServicesSection() {
 
         <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {services.items.map((service, index) => {
-            const Icon = serviceIcons[index].icon
+            const Icon = serviceIcons[index]?.icon ?? ClipboardCheck
 
             return (
               <motion.article

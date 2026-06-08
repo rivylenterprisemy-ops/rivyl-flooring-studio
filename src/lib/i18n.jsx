@@ -1,7 +1,7 @@
 /* eslint-disable react-refresh/only-export-components */
 import { createContext, useContext, useEffect, useMemo } from "react"
 
-const WHATSAPP_NUMBER = "60127659543"
+const WHATSAPP_NUMBER = "60137069543"
 
 const dictionaries = {
   en: {
@@ -10,12 +10,12 @@ const dictionaries = {
     alternatePath: "/ms",
     languageLabel: "English",
     seo: {
-      title: "Rivyl Flooring Studio | Flooring Renewal in Johor Bahru",
+      title: "Rivyl Flooring Studio | Flooring, Painting & Electrical Services in Johor Bahru",
       description:
-        "Premium apartment flooring renewal, tile replacement and surface finishing services by Rivyl Flooring Studio in Johor Bahru, Malaysia.",
+        "Property improvement and maintenance services in Johor Bahru, including flooring, painting and electrical work for residential and commercial projects.",
     },
     whatsappMessage:
-      "Hi Rivyl Flooring Studio, I'd like to request a flooring quotation.",
+      "Hi Rivyl Flooring Studio, I'd like to request a property improvement quotation.",
     nav: {
       homeAria: "Rivyl Flooring Studio home",
       items: [
@@ -31,26 +31,26 @@ const dictionaries = {
       switchToMalay: "Switch to Bahasa Melayu",
     },
     hero: {
-      eyebrow: "RIVYL FLOORING STUDIO",
-      title: "Refined Flooring Transformations For Modern Homes",
+      eyebrow: "PROPERTY IMPROVEMENT & MAINTENANCE SERVICES",
+      title: "Flooring, Painting & Electrical Services For Refined Properties",
       copy:
-        "Premium tile replacement and surface renewal crafted for apartments, homes and modern living spaces.",
+        "Flagship flooring work with painting and electrical support for residences, apartments, offices, shoplots and commercial premises.",
       quotation: "Get Quotation",
       projectWork: "See Project Work",
       imageAlt:
         "Rivyl apartment flooring project with reflective porcelain-look tiles",
       features: [
-        "Precision Tile Installation",
-        "Premium Surface Finishes",
-        "Apartment Flooring Specialists",
-        "Modern Porcelain & Marble Looks",
+        "Flooring, Painting & Electrical Services",
+        "Residential & Commercial Projects",
+        "Apartments, Offices & Shoplots",
+        "Premium Finishing Detail",
       ],
     },
     trust: [
-      "Apartment Flooring Specialist",
+      "Flooring Flagship Service",
       "Johor Bahru Based",
       "Free Site Quotation",
-      "Practical Renovation Experience",
+      "Residential & Commercial Projects",
     ],
     beforeAfter: {
       eyebrow: "Craftsmanship Journey",
@@ -74,7 +74,7 @@ const dictionaries = {
       allProjects: "All Projects",
       proofItems: [
         { label: "Completed Projects", value: "Real flooring work" },
-        { label: "Satisfied Clients", value: "Direct homeowner handovers" },
+        { label: "Satisfied Clients", value: "Direct client handovers" },
         { label: "Years Experience", value: "Practical renovation sites" },
       ],
       labels: {
@@ -118,13 +118,13 @@ const dictionaries = {
     },
     services: {
       eyebrow: "Services",
-      title: "Practical flooring services for refined homes",
+      title: "Property improvement and maintenance services",
       imageAlt: "Apartment floor tile surface and skirting finish",
       items: [
         {
           title: "Tile Installation",
           description:
-            "Professional installation for new homes, renovations and extensions.",
+            "Professional tile installation for residential and commercial properties.",
         },
         {
           title: "Tile Replacement",
@@ -141,11 +141,21 @@ const dictionaries = {
           description:
             "Advice on tile selection, layout planning and material estimation.",
         },
+        {
+          title: "Painting Services",
+          description:
+            "Interior painting, exterior painting, commercial repainting and touch-up works.",
+        },
+        {
+          title: "Electrical Services",
+          description:
+            "Electrical wiring, lighting installation, fan installation, power point installation and minor electrical upgrades.",
+        },
       ],
     },
     why: {
       eyebrow: "Trust & Workmanship",
-      titlePrefix: "Why Homeowners Choose",
+      titlePrefix: "Why Clients Choose",
       brand: "Rivyl Flooring Studio",
       items: [
         "Precision Tile Levelling System",
@@ -160,7 +170,7 @@ const dictionaries = {
       eyebrow: "Service Areas",
       title: "Serving Johor Bahru & Surrounding Areas",
       copy:
-        "We provide flooring replacement, tile installation and surface renewal services across Johor Bahru and nearby residential areas.",
+        "We provide flooring, painting and electrical services across Johor Bahru for residential and commercial properties.",
       serviceAreas: [
         "Johor Bahru",
         "Skudai",
@@ -173,25 +183,26 @@ const dictionaries = {
       ],
     },
     cta: {
-      eyebrow: "Start Your Flooring Upgrade",
-      title: "Ready to upgrade your flooring?",
+      eyebrow: "Start Your Property Upgrade",
+      title: "Ready to improve your property?",
       copy:
-        "Share your floor area, photos and location. We'll guide you with tile selection, scope and quotation.",
-      whatsapp: "Send Floor Photos",
+        "Share your property type, photos and location. We'll guide you with the right flooring, painting or electrical scope and quotation.",
+      whatsapp: "Send Project Photos",
       callback: "Request a Callback",
       projectWork: "See Project Work",
     },
     footer: {
       description:
-        "Premium apartment flooring renewal, tile replacement and practical surface finishing based in Johor Bahru, Malaysia.",
+        "Property improvement and maintenance services for flooring, painting and electrical work based in Johor Bahru, Malaysia.",
       locationHeading: "Location",
       location: "Johor Bahru, Malaysia",
       servicesHeading: "Services",
       services: [
+        "Flooring Services",
+        "Painting Services",
+        "Electrical Services",
+        "Residential & Commercial Projects",
         "Tile Replacement",
-        "Floor Retiling",
-        "Skirting & Edge Finishing",
-        "Painting & Surface Touch-Up",
       ],
       navigationHeading: "Quick Navigation",
       navigation: [
@@ -232,12 +243,12 @@ const dictionaries = {
     alternatePath: "/",
     languageLabel: "Bahasa Melayu",
     seo: {
-      title: "Rivyl Flooring Studio | Pembaharuan Lantai di Johor Bahru",
+      title: "Rivyl Flooring Studio | Servis Lantai, Pengecatan & Elektrik di Johor Bahru",
       description:
-        "Servis premium pembaharuan lantai apartmen, penggantian jubin dan kemasan permukaan oleh Rivyl Flooring Studio di Johor Bahru, Malaysia.",
+        "Perkhidmatan penambahbaikan dan penyelenggaraan hartanah di Johor Bahru, termasuk lantai, pengecatan dan elektrik untuk projek kediaman dan komersial.",
     },
     whatsappMessage:
-      "Hai Rivyl Flooring Studio, saya ingin meminta sebut harga lantai.",
+      "Hai Rivyl Flooring Studio, saya ingin meminta sebut harga penambahbaikan hartanah.",
     nav: {
       homeAria: "Laman utama Rivyl Flooring Studio",
       items: [
@@ -253,26 +264,26 @@ const dictionaries = {
       switchToMalay: "Tukar ke Bahasa Melayu",
     },
     hero: {
-      eyebrow: "RIVYL FLOORING STUDIO",
-      title: "Transformasi Lantai Elegan Untuk Kediaman Moden",
+      eyebrow: "PERKHIDMATAN PENAMBAHBAIKAN & PENYELENGGARAAN HARTANAH",
+      title: "Perkhidmatan Lantai, Pengecatan & Elektrik Untuk Hartanah Elegan",
       copy:
-        "Penggantian jubin premium dan pembaharuan permukaan untuk apartmen, rumah dan ruang kediaman moden.",
+        "Kerja lantai sebagai servis utama, disokong pengecatan dan elektrik untuk kediaman, apartmen, pejabat, lot kedai dan premis komersial.",
       quotation: "Dapatkan Sebut Harga",
       projectWork: "Lihat Projek",
       imageAlt:
         "Projek lantai apartmen Rivyl dengan jubin gaya porselin berkilat",
       features: [
-        "Pemasangan Jubin Tepat",
-        "Kemasan Permukaan Premium",
-        "Pakar Lantai Apartmen",
-        "Gaya Porselin & Marmar Moden",
+        "Perkhidmatan Lantai, Pengecatan & Elektrik",
+        "Projek Kediaman & Komersial",
+        "Apartmen, Pejabat & Lot Kedai",
+        "Perincian Kemasan Premium",
       ],
     },
     trust: [
-      "Pakar Lantai Apartmen",
+      "Servis Utama Lantai",
       "Berpusat di Johor Bahru",
       "Sebut Harga Tapak Percuma",
-      "Pengalaman Renovasi Praktikal",
+      "Projek Kediaman & Komersial",
     ],
     beforeAfter: {
       eyebrow: "Perjalanan Kerja Tangan",
@@ -296,7 +307,7 @@ const dictionaries = {
       allProjects: "Semua Projek",
       proofItems: [
         { label: "Projek Siap", value: "Kerja lantai sebenar" },
-        { label: "Klien Puas Hati", value: "Serahan terus kepada pemilik rumah" },
+        { label: "Klien Puas Hati", value: "Serahan terus kepada klien" },
         { label: "Pengalaman", value: "Tapak renovasi praktikal" },
       ],
       labels: {
@@ -340,13 +351,13 @@ const dictionaries = {
     },
     services: {
       eyebrow: "Servis",
-      title: "Servis lantai praktikal untuk kediaman elegan",
+      title: "Perkhidmatan penambahbaikan dan penyelenggaraan hartanah",
       imageAlt: "Permukaan jubin lantai apartmen dan kemasan skirting",
       items: [
         {
           title: "Pemasangan Jubin",
           description:
-            "Pemasangan profesional untuk rumah baharu, renovasi dan sambungan ruang.",
+            "Pemasangan jubin profesional untuk hartanah kediaman dan komersial.",
         },
         {
           title: "Penggantian Jubin",
@@ -363,11 +374,21 @@ const dictionaries = {
           description:
             "Nasihat pilihan jubin, perancangan susun atur dan anggaran bahan.",
         },
+        {
+          title: "Servis Pengecatan",
+          description:
+            "Pengecatan dalaman, pengecatan luaran, cat semula komersial dan kerja sentuhan akhir.",
+        },
+        {
+          title: "Servis Elektrik",
+          description:
+            "Pendawaian elektrik, pemasangan lampu, pemasangan kipas, pemasangan soket kuasa dan naik taraf elektrik kecil.",
+        },
       ],
     },
     why: {
       eyebrow: "Kepercayaan & Kerja Tangan",
-      titlePrefix: "Mengapa Pemilik Rumah Memilih",
+      titlePrefix: "Mengapa Klien Memilih",
       brand: "Rivyl Flooring Studio",
       items: [
         "Sistem Perataan Jubin Tepat",
@@ -382,7 +403,7 @@ const dictionaries = {
       eyebrow: "Kawasan Servis",
       title: "Menyediakan Servis di Johor Bahru & Kawasan Sekitar",
       copy:
-        "Kami menyediakan servis penggantian lantai, pemasangan jubin dan pembaharuan permukaan di Johor Bahru serta kawasan kediaman berdekatan.",
+        "Kami menyediakan servis lantai, pengecatan dan elektrik di Johor Bahru untuk hartanah kediaman dan komersial.",
       serviceAreas: [
         "Johor Bahru",
         "Skudai",
@@ -395,25 +416,26 @@ const dictionaries = {
       ],
     },
     cta: {
-      eyebrow: "Mulakan Naik Taraf Lantai Anda",
-      title: "Sedia untuk naik taraf lantai anda?",
+      eyebrow: "Mulakan Naik Taraf Hartanah Anda",
+      title: "Sedia untuk menambah baik hartanah anda?",
       copy:
-        "Kongsi keluasan lantai, gambar dan lokasi anda. Kami akan bantu dengan pilihan jubin, skop dan sebut harga.",
-      whatsapp: "Hantar Gambar Lantai",
+        "Kongsi jenis hartanah, gambar dan lokasi anda. Kami akan bantu dengan skop lantai, pengecatan atau elektrik yang sesuai serta sebut harga.",
+      whatsapp: "Hantar Gambar Projek",
       callback: "Minta Panggilan Balik",
       projectWork: "Lihat Projek",
     },
     footer: {
       description:
-        "Pembaharuan lantai apartmen premium, penggantian jubin dan kemasan permukaan praktikal berpusat di Johor Bahru, Malaysia.",
+        "Perkhidmatan penambahbaikan dan penyelenggaraan hartanah untuk kerja lantai, pengecatan dan elektrik berpusat di Johor Bahru, Malaysia.",
       locationHeading: "Lokasi",
       location: "Johor Bahru, Malaysia",
       servicesHeading: "Servis",
       services: [
+        "Servis Lantai",
+        "Servis Pengecatan",
+        "Servis Elektrik",
+        "Projek Kediaman & Komersial",
         "Penggantian Jubin",
-        "Pemasangan Semula Lantai",
-        "Kemasan Skirting & Tepi",
-        "Cat & Sentuhan Permukaan",
       ],
       navigationHeading: "Navigasi Pantas",
       navigation: [
