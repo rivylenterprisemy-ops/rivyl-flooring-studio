@@ -1,8 +1,8 @@
 import { useState } from "react"
 import { motion } from "framer-motion"
 
+import completedFlooringAfter from "@/assets/projects/completed-flooring-after.jpg"
 import craftsmanshipProcess from "@/assets/projects/craftsmanship-process-premium-v2.jpg"
-import heroFlooring from "@/assets/projects/hero-flooring.jpg"
 import { useLocale } from "@/lib/i18n"
 
 export default function BeforeAfterSection() {
@@ -50,7 +50,7 @@ export default function BeforeAfterSection() {
               style={{ clipPath: `inset(0 ${100 - position}% 0 0)` }}
             >
               <img
-                src={heroFlooring}
+                src={completedFlooringAfter}
                 alt={beforeAfter.completedAlt}
                 className="aspect-[4/5] h-full w-full object-cover object-[center_76%] brightness-[1.04] saturate-[0.9] sm:aspect-[16/9] sm:object-[center_74%] lg:aspect-[16/7.5]"
               />
