@@ -1,10 +1,9 @@
 import { useMemo, useState } from "react"
 import { motion } from "framer-motion"
 
-import corridorFlooring from "@/assets/projects/corridor-flooring.jpg"
-import flooringDetail from "@/assets/projects/flooring-detail.jpg"
 import heroFlooring from "@/assets/projects/hero-flooring.jpg"
-import livingAngle from "@/assets/projects/living-angle.jpg"
+import paintingCommercialExterior from "@/assets/projects/painting/painting-commercial-exterior.jpg"
+import paintingHeroFeatureWall from "@/assets/projects/painting/painting-hero-feature-wall.jpg"
 import { useLocale } from "@/lib/i18n"
 
 const projectImages = [
@@ -13,16 +12,16 @@ const projectImages = [
     imagePosition: "object-[center_74%]",
   },
   {
-    image: corridorFlooring,
-    imagePosition: "object-[center_72%]",
+    image: paintingHeroFeatureWall,
+    imagePosition: "object-[center_58%]",
   },
   {
-    image: livingAngle,
-    imagePosition: "object-[center_76%]",
+    image: paintingCommercialExterior,
+    imagePosition: "object-[center_54%]",
   },
   {
-    image: flooringDetail,
-    imagePosition: "object-[center_74%]",
+    image: null,
+    imagePosition: "",
   },
 ]
 
@@ -136,11 +135,19 @@ export default function FeaturedProjectSection() {
               className="group rounded-3xl border border-stone-200/70 bg-[#f8f4ee]/70 p-2 shadow-[0_12px_34px_rgba(39,32,24,0.07)] transition duration-300 lg:hover:-translate-y-1 lg:hover:shadow-[0_18px_42px_rgba(39,32,24,0.1)]"
             >
               <div className="overflow-hidden rounded-[1.25rem] bg-stone-200">
-                <img
-                  src={project.image}
-                  alt={`${project.title} in ${project.location}`}
-                  className={`aspect-[4/3] w-full object-cover saturate-[0.9] transition duration-700 ${project.imagePosition} lg:group-hover:scale-[1.04]`}
-                />
+                {project.image ? (
+                  <img
+                    src={project.image}
+                    alt={`${project.title} in ${project.location}`}
+                    className={`aspect-[4/3] w-full object-cover saturate-[0.9] transition duration-700 ${project.imagePosition} lg:group-hover:scale-[1.04]`}
+                  />
+                ) : (
+                  <div className="flex aspect-[4/3] w-full items-center justify-center bg-[#eee7dd] px-6 text-center">
+                    <p className="max-w-[12rem] text-xs font-semibold uppercase tracking-[0.2em] text-stone-500">
+                      {portfolio.comingSoon}
+                    </p>
+                  </div>
+                )}
               </div>
 
               <div className="px-3 pb-4 pt-5">
