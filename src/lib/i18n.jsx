@@ -69,7 +69,7 @@ const dictionaries = {
       eyebrow: "Project Portfolio",
       title: "Featured service capabilities across property improvement",
       copy:
-        "A focused view of Rivyl Flooring Studio capabilities across flooring, painting and electrical services for residential and commercial projects.",
+        "A focused view of flooring, painting and electrical capabilities. Residential projects are primarily served within Johor and surrounding areas, while larger commercial projects may be considered across Malaysia based on project requirements.",
       filters: ["All Projects", "Flooring", "Painting", "Electrical"],
       allProjects: "All Projects",
       comingSoon: "Project Portfolio Coming Soon",
@@ -85,37 +85,83 @@ const dictionaries = {
       projects: [
         {
           title: "Apartment Flooring Transformation",
-          location: "Taman Universiti, Johor Bahru",
+          location: "Taman Gaya, Johor Bahru",
           tileType: "Flooring",
           scope: "Tile Replacement & Flooring Renewal",
           status: "Completed",
           category: "Flooring",
         },
         {
-          title: "Interior Painting Project",
-          location: "Johor Bahru",
+          title: "Residential Interior Painting",
+          location: "Negeri Sembilan",
           tileType: "Painting",
-          scope: "Interior Repainting & Feature Wall Finishes",
+          scope: "Interior Repainting & Decorative Wall Finishes",
           status: "Completed",
           category: "Painting",
         },
         {
-          title: "Commercial Repainting Works",
-          location: "Johor Bahru",
+          title: "Commercial Building Repainting",
+          location: "Politeknik Jeli, Kelantan",
           tileType: "Painting",
-          scope: "Commercial & Building Repainting Services",
+          scope: "Commercial Building Repainting & Rope Access Works",
           status: "Completed",
           category: "Painting",
         },
         {
           title: "Electrical Services",
-          location: "Johor Bahru",
+          location: "Johor & Selected Malaysia Projects",
           tileType: "Electrical",
           scope: "Electrical Wiring & Installation Services",
           status: "Coming Soon",
           category: "Electrical",
         },
       ],
+    },
+    paintingProjects: {
+      eyebrow: "Painting Projects",
+      title: "Painting Projects",
+      copy:
+        "Completed residential, apartment, institutional and rope access painting work with clean preparation and practical finishing detail.",
+      capabilities: ["Residential", "Commercial", "Institutional", "High-Rise"],
+      items: [
+        {
+          caption: "Residential Interior Painting",
+        },
+        {
+          caption: "Bedroom Repainting",
+        },
+        {
+          caption: "Interior Corridor Finishing",
+        },
+        {
+          caption: "Apartment Repainting Project",
+        },
+        {
+          caption: "Politeknik Jeli, Kelantan",
+        },
+        {
+          caption: "Rope Access Painting Works",
+        },
+      ],
+    },
+    projectTeam: {
+      eyebrow: "Project Team",
+      title: "Experienced Project Teams",
+      description:
+        "Our project teams support residential, commercial and institutional works across Malaysia. From flooring and painting to maintenance and improvement projects, we work with experienced site personnel equipped for safe and professional project execution.",
+      capabilities: [
+        "Residential Projects",
+        "Commercial Buildings",
+        "Institutional Facilities",
+        "Exterior Works",
+        "Interior Works",
+        "Site Coordination",
+      ],
+      personnel: "10+ Site Personnel",
+      note: "Project manpower is scaled according to project requirements.",
+      supportCaption: "Active project personnel supporting site execution and delivery.",
+      mainImageAlt: "Rivyl project field crew on site",
+      supportImageAlt: "Rivyl site crew supporting project execution",
     },
     services: {
       eyebrow: "Services",
@@ -303,7 +349,7 @@ const dictionaries = {
       eyebrow: "Portfolio Projek",
       title: "Keupayaan servis pilihan untuk penambahbaikan hartanah",
       copy:
-        "Gambaran ringkas keupayaan Rivyl Flooring Studio dalam servis lantai, pengecatan dan elektrik untuk projek kediaman dan komersial.",
+        "Gambaran ringkas keupayaan servis lantai, pengecatan dan elektrik. Projek kediaman tertumpu di Johor dan kawasan sekitar, manakala projek komersial berskala lebih besar boleh dipertimbangkan di seluruh Malaysia mengikut keperluan projek.",
       filters: ["Semua Projek", "Lantai", "Pengecatan", "Elektrik"],
       allProjects: "Semua Projek",
       comingSoon: "Portfolio Projek Akan Datang",
@@ -319,37 +365,83 @@ const dictionaries = {
       projects: [
         {
           title: "Transformasi Lantai Apartmen",
-          location: "Taman Universiti, Johor Bahru",
+          location: "Taman Gaya, Johor Bahru",
           tileType: "Lantai",
           scope: "Penggantian Jubin & Pembaharuan Lantai",
           status: "Siap",
           category: "Lantai",
         },
         {
-          title: "Projek Pengecatan Dalaman",
-          location: "Johor Bahru",
+          title: "Pengecatan Dalaman Kediaman",
+          location: "Negeri Sembilan",
           tileType: "Pengecatan",
-          scope: "Cat Semula Dalaman & Kemasan Dinding Fokus",
+          scope: "Cat Semula Dalaman & Kemasan Dinding Hiasan",
           status: "Siap",
           category: "Pengecatan",
         },
         {
-          title: "Kerja Cat Semula Komersial",
-          location: "Johor Bahru",
+          title: "Pengecatan Semula Bangunan Komersial",
+          location: "Politeknik Jeli, Kelantan",
           tileType: "Pengecatan",
-          scope: "Servis Cat Semula Komersial & Bangunan",
+          scope: "Cat Semula Bangunan Komersial & Kerja Akses Tali",
           status: "Siap",
           category: "Pengecatan",
         },
         {
           title: "Servis Elektrik",
-          location: "Johor Bahru",
+          location: "Johor & Projek Malaysia Terpilih",
           tileType: "Elektrik",
-          scope: "Servis Pendawaian & Pemasangan Elektrik",
+          scope: "Perkhidmatan Pendawaian & Pemasangan Elektrik",
           status: "Akan Datang",
           category: "Elektrik",
         },
       ],
+    },
+    paintingProjects: {
+      eyebrow: "Projek Pengecatan",
+      title: "Projek Pengecatan",
+      copy:
+        "Kerja pengecatan kediaman, apartmen, institusi dan akses tali yang telah disiapkan dengan persediaan bersih dan kemasan praktikal.",
+      capabilities: ["Kediaman", "Komersial", "Institusi", "Bangunan Tinggi"],
+      items: [
+        {
+          caption: "Pengecatan Dalaman Kediaman",
+        },
+        {
+          caption: "Cat Semula Bilik Tidur",
+        },
+        {
+          caption: "Kemasan Koridor Dalaman",
+        },
+        {
+          caption: "Projek Cat Semula Apartmen",
+        },
+        {
+          caption: "Politeknik Jeli, Kelantan",
+        },
+        {
+          caption: "Kerja Pengecatan Akses Tali",
+        },
+      ],
+    },
+    projectTeam: {
+      eyebrow: "Pasukan Projek",
+      title: "Pasukan Projek Berpengalaman",
+      description:
+        "Pasukan projek kami menyokong kerja kediaman, komersial dan institusi di seluruh Malaysia. Daripada lantai dan pengecatan hingga projek penyelenggaraan dan penambahbaikan, kami bekerja dengan personel tapak berpengalaman yang bersedia untuk pelaksanaan projek yang selamat dan profesional.",
+      capabilities: [
+        "Projek Kediaman",
+        "Bangunan Komersial",
+        "Fasiliti Institusi",
+        "Kerja Luaran",
+        "Kerja Dalaman",
+        "Koordinasi Tapak",
+      ],
+      personnel: "10+ Personel Tapak",
+      note: "Tenaga kerja projek disesuaikan mengikut keperluan projek.",
+      supportCaption: "Personel projek aktif menyokong pelaksanaan dan penyerahan tapak.",
+      mainImageAlt: "Pasukan lapangan projek Rivyl di tapak",
+      supportImageAlt: "Pasukan tapak Rivyl menyokong pelaksanaan projek",
     },
     services: {
       eyebrow: "Servis",

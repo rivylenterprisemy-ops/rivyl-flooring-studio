@@ -2,8 +2,8 @@ import { useMemo, useState } from "react"
 import { motion } from "framer-motion"
 
 import heroFlooring from "@/assets/projects/hero-flooring.jpg"
-import paintingCommercialExterior from "@/assets/projects/painting/painting-commercial-exterior.jpg"
 import paintingHeroFeatureWall from "@/assets/projects/painting/painting-hero-feature-wall.jpg"
+import paintingPoliteknikCommercialHero from "@/assets/projects/painting/painting-politeknik-commercial-hero.jpg"
 import { useLocale } from "@/lib/i18n"
 
 const projectImages = [
@@ -16,8 +16,8 @@ const projectImages = [
     imagePosition: "object-[center_58%]",
   },
   {
-    image: paintingCommercialExterior,
-    imagePosition: "object-[center_54%]",
+    image: paintingPoliteknikCommercialHero,
+    imagePosition: "object-[center_52%]",
   },
   {
     image: null,

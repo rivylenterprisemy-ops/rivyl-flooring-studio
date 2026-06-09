@@ -5,6 +5,8 @@ import BeforeAfterSection from "@/sections/BeforeAfterSection"
 import FeaturedProjectSection from "@/sections/FeaturedProjectSection"
 import FinalCTASection from "@/sections/FinalCTASection"
 import HeroSection from "@/sections/HeroSection"
+import PaintingProjectsSection from "@/sections/PaintingProjectsSection"
+import ProjectTeamSection from "@/sections/ProjectTeamSection"
 import ServiceAreasSection from "@/sections/ServiceAreasSection"
 import ServicesSection from "@/sections/ServicesSection"
 import TrustStripSection from "@/sections/TrustStripSection"
@@ -17,8 +19,10 @@ export default function HomePage() {
       <main>
         <HeroSection />
         <TrustStripSection />
-        <BeforeAfterSection />
         <FeaturedProjectSection />
+        <PaintingProjectsSection />
+        <ProjectTeamSection />
+        <BeforeAfterSection />
         <ServicesSection />
         <WhyRivylSection />
         <ServiceAreasSection />
