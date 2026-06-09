@@ -3,8 +3,6 @@ import { motion } from "framer-motion"
 
 import paintingApartmentProject from "@/assets/projects/painting/painting-apartment-project.jpg"
 import paintingHeroFeatureWall from "@/assets/projects/painting/painting-hero-feature-wall.jpg"
-import paintingInteriorBedroom from "@/assets/projects/painting/painting-interior-bedroom.jpg"
-import paintingInteriorCorridor from "@/assets/projects/painting/painting-interior-corridor.jpg"
 import paintingPoliteknikBuildingView from "@/assets/projects/painting/painting-politeknik-building-view.jpg"
 import paintingRopeAccess from "@/assets/projects/painting/painting-rope-access.jpg"
 import { useLocale } from "@/lib/i18n"
@@ -13,14 +11,6 @@ const galleryImages = [
   {
     image: paintingHeroFeatureWall,
     imagePosition: "object-[center_58%]",
-  },
-  {
-    image: paintingInteriorBedroom,
-    imagePosition: "object-[center_54%]",
-  },
-  {
-    image: paintingInteriorCorridor,
-    imagePosition: "object-[center_52%]",
   },
   {
     image: paintingApartmentProject,

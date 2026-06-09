@@ -31,19 +31,19 @@ const dictionaries = {
       switchToMalay: "Switch to Bahasa Melayu",
     },
     hero: {
-      eyebrow: "PROPERTY IMPROVEMENT & MAINTENANCE SERVICES",
-      title: "Flooring, Painting & Electrical Services For Refined Properties",
+      eyebrow: "TILE FLOORING SPECIALISTS",
+      title: "Tile Flooring Renewal Specialists",
       copy:
-        "Flagship flooring work with painting and electrical support for residences, apartments, offices, shoplots and commercial premises.",
+        "Professional tile replacement, flooring renewal, painting and electrical services for residential and commercial properties.",
       quotation: "Get Quotation",
       projectWork: "See Project Work",
       imageAlt:
         "Rivyl apartment flooring project with reflective porcelain-look tiles",
       features: [
-        "Flooring, Painting & Electrical Services",
+        "Tile Flooring Renewal",
+        "Tile Replacement Specialists",
         "Residential & Commercial Projects",
-        "Apartments, Offices & Shoplots",
-        "Premium Finishing Detail",
+        "Painting & Electrical Coordination",
       ],
     },
     trust: [
@@ -121,27 +121,33 @@ const dictionaries = {
       eyebrow: "Painting Projects",
       title: "Painting Projects",
       copy:
-        "Completed residential, apartment, institutional and rope access painting work with clean preparation and practical finishing detail.",
+        "Selected painting works that support Rivyl's wider property improvement services without taking focus away from tile flooring renewal.",
       capabilities: ["Residential", "Commercial", "Institutional", "High-Rise"],
       items: [
         {
           caption: "Residential Interior Painting",
         },
         {
-          caption: "Bedroom Repainting",
+          caption: "Residential Exterior / Apartment Repainting",
         },
         {
-          caption: "Interior Corridor Finishing",
-        },
-        {
-          caption: "Apartment Repainting Project",
-        },
-        {
-          caption: "Politeknik Jeli, Kelantan",
+          caption: "Commercial Building Repainting",
         },
         {
           caption: "Rope Access Painting Works",
         },
+      ],
+    },
+    tileTrust: {
+      eyebrow: "Why Rivyl",
+      title: "Why Clients Choose Rivyl",
+      items: [
+        "Tile Flooring Specialists",
+        "Residential & Commercial Experience",
+        "Transparent Quotations",
+        "Trusted Specialist Partners",
+        "Responsive Project Coordination",
+        "Quality Workmanship",
       ],
     },
     projectTeam: {
@@ -157,7 +163,7 @@ const dictionaries = {
         "Interior Works",
         "Site Coordination",
       ],
-      personnel: "10+ Site Personnel",
+      personnel: "Scalable Project Workforce",
       note: "Project manpower is scaled according to project requirements.",
       supportCaption: "Active project personnel supporting site execution and delivery.",
       mainImageAlt: "Rivyl project field crew on site",
@@ -165,13 +171,13 @@ const dictionaries = {
     },
     services: {
       eyebrow: "Services",
-      title: "Property improvement and maintenance services",
+      title: "Tile flooring renewal with supporting services",
       imageAlt: "Apartment floor tile surface and skirting finish",
       items: [
         {
           title: "Tile Installation",
           description:
-            "Professional tile installation for residential and commercial properties.",
+            "Professional tile installation for residential and commercial flooring renewal.",
         },
         {
           title: "Tile Replacement",
@@ -186,7 +192,7 @@ const dictionaries = {
         {
           title: "Consultation & Quotation",
           description:
-            "Advice on tile selection, layout planning and material estimation.",
+            "Advice on tile selection, flooring scope, layout planning and material estimation.",
         },
         {
           title: "Painting Services",
@@ -205,7 +211,7 @@ const dictionaries = {
       titlePrefix: "Why Clients Choose",
       brand: "Rivyl Flooring Studio",
       items: [
-        "Precision Tile Levelling System",
+        "Tile Flooring Renewal Focus",
         "Clean & Professional Workmanship",
         "Transparent Quotations",
         "Residential & Commercial Projects",
@@ -311,19 +317,19 @@ const dictionaries = {
       switchToMalay: "Tukar ke Bahasa Melayu",
     },
     hero: {
-      eyebrow: "PERKHIDMATAN PENAMBAHBAIKAN & PENYELENGGARAAN HARTANAH",
-      title: "Perkhidmatan Lantai, Pengecatan & Elektrik Untuk Hartanah Elegan",
+      eyebrow: "PAKAR LANTAI JUBIN",
+      title: "Pakar Pembaharuan Lantai Jubin",
       copy:
-        "Kerja lantai sebagai servis utama, disokong pengecatan dan elektrik untuk kediaman, apartmen, pejabat, lot kedai dan premis komersial.",
+        "Perkhidmatan profesional penggantian jubin, pembaharuan lantai, pengecatan dan elektrik untuk hartanah kediaman dan komersial.",
       quotation: "Dapatkan Sebut Harga",
       projectWork: "Lihat Projek",
       imageAlt:
         "Projek lantai apartmen Rivyl dengan jubin gaya porselin berkilat",
       features: [
-        "Perkhidmatan Lantai, Pengecatan & Elektrik",
+        "Pembaharuan Lantai Jubin",
+        "Pakar Penggantian Jubin",
         "Projek Kediaman & Komersial",
-        "Apartmen, Pejabat & Lot Kedai",
-        "Perincian Kemasan Premium",
+        "Koordinasi Pengecatan & Elektrik",
       ],
     },
     trust: [
@@ -401,27 +407,33 @@ const dictionaries = {
       eyebrow: "Projek Pengecatan",
       title: "Projek Pengecatan",
       copy:
-        "Kerja pengecatan kediaman, apartmen, institusi dan akses tali yang telah disiapkan dengan persediaan bersih dan kemasan praktikal.",
+        "Pilihan kerja pengecatan yang menyokong perkhidmatan penambahbaikan hartanah Rivyl tanpa mengalihkan fokus daripada pembaharuan lantai jubin.",
       capabilities: ["Kediaman", "Komersial", "Institusi", "Bangunan Tinggi"],
       items: [
         {
           caption: "Pengecatan Dalaman Kediaman",
         },
         {
-          caption: "Cat Semula Bilik Tidur",
+          caption: "Cat Semula Luaran Kediaman / Apartmen",
         },
         {
-          caption: "Kemasan Koridor Dalaman",
-        },
-        {
-          caption: "Projek Cat Semula Apartmen",
-        },
-        {
-          caption: "Politeknik Jeli, Kelantan",
+          caption: "Pengecatan Semula Bangunan Komersial",
         },
         {
           caption: "Kerja Pengecatan Akses Tali",
         },
+      ],
+    },
+    tileTrust: {
+      eyebrow: "Mengapa Rivyl",
+      title: "Mengapa Pelanggan Memilih Rivyl",
+      items: [
+        "Pakar Lantai Jubin",
+        "Pengalaman Kediaman & Komersial",
+        "Sebut Harga Telus",
+        "Rakan Pakar Dipercayai",
+        "Koordinasi Projek Responsif",
+        "Mutu Kerja Berkualiti",
       ],
     },
     projectTeam: {
@@ -437,7 +449,7 @@ const dictionaries = {
         "Kerja Dalaman",
         "Koordinasi Tapak",
       ],
-      personnel: "10+ Personel Tapak",
+      personnel: "Tenaga Kerja Projek Boleh Diskala",
       note: "Tenaga kerja projek disesuaikan mengikut keperluan projek.",
       supportCaption: "Personel projek aktif menyokong pelaksanaan dan penyerahan tapak.",
       mainImageAlt: "Pasukan lapangan projek Rivyl di tapak",
@@ -445,13 +457,13 @@ const dictionaries = {
     },
     services: {
       eyebrow: "Servis",
-      title: "Perkhidmatan penambahbaikan dan penyelenggaraan hartanah",
+      title: "Pembaharuan lantai jubin dengan servis sokongan",
       imageAlt: "Permukaan jubin lantai apartmen dan kemasan skirting",
       items: [
         {
           title: "Pemasangan Jubin",
           description:
-            "Pemasangan jubin profesional untuk hartanah kediaman dan komersial.",
+            "Pemasangan jubin profesional untuk pembaharuan lantai kediaman dan komersial.",
         },
         {
           title: "Penggantian Jubin",
@@ -466,7 +478,7 @@ const dictionaries = {
         {
           title: "Konsultasi & Sebut Harga",
           description:
-            "Nasihat pilihan jubin, perancangan susun atur dan anggaran bahan.",
+            "Nasihat pilihan jubin, skop lantai, perancangan susun atur dan anggaran bahan.",
         },
         {
           title: "Servis Pengecatan",
@@ -485,7 +497,7 @@ const dictionaries = {
       titlePrefix: "Mengapa Klien Memilih",
       brand: "Rivyl Flooring Studio",
       items: [
-        "Sistem Perataan Jubin Tepat",
+        "Fokus Pembaharuan Lantai Jubin",
         "Kerja Bersih & Profesional",
         "Sebut Harga Telus",
         "Projek Kediaman & Komersial",

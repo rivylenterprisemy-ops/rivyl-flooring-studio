@@ -9,6 +9,7 @@ import PaintingProjectsSection from "@/sections/PaintingProjectsSection"
 import ProjectTeamSection from "@/sections/ProjectTeamSection"
 import ServiceAreasSection from "@/sections/ServiceAreasSection"
 import ServicesSection from "@/sections/ServicesSection"
+import TileTrustSection from "@/sections/TileTrustSection"
 import TrustStripSection from "@/sections/TrustStripSection"
 import WhyRivylSection from "@/sections/WhyRivylSection"
 
@@ -18,12 +19,13 @@ export default function HomePage() {
       <Navbar />
       <main>
         <HeroSection />
-        <TrustStripSection />
         <FeaturedProjectSection />
-        <PaintingProjectsSection />
-        <ProjectTeamSection />
         <BeforeAfterSection />
+        <ProjectTeamSection />
+        <PaintingProjectsSection />
         <ServicesSection />
+        <TileTrustSection />
+        <TrustStripSection />
         <WhyRivylSection />
         <ServiceAreasSection />
         <FinalCTASection />
