@@ -15,7 +15,7 @@ export default function ProjectTeamSection() {
   const { projectTeam } = content
 
   return (
-    <section className="bg-[#f4efe7] px-5 py-18 sm:px-8 sm:py-22 lg:px-10 lg:py-26">
+    <section className="bg-[#f4efe7] px-5 py-14 sm:px-8 sm:py-18 lg:px-10 lg:py-20">
       <div className="mx-auto max-w-7xl">
         <motion.div
           initial="hidden"

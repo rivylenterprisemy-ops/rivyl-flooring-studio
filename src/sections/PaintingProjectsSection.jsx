@@ -40,7 +40,7 @@ export default function PaintingProjectsSection() {
   }))
 
   return (
-    <section id="painting-projects" className="bg-[#eee7dd] px-5 py-18 sm:px-8 sm:py-22 lg:px-10 lg:py-26">
+    <section id="painting-projects" className="bg-[#eee7dd] px-5 py-14 sm:px-8 sm:py-18 lg:px-10 lg:py-20">
       <div className="mx-auto max-w-7xl">
         <motion.div
           initial="hidden"
@@ -94,7 +94,7 @@ export default function PaintingProjectsSection() {
           </motion.div>
         </motion.div>
 
-        <div className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+        <div className="mt-10 grid gap-5 md:grid-cols-2">
           {galleryItems.map((item, index) => (
             <motion.article
               key={item.caption}

@@ -138,18 +138,6 @@ const dictionaries = {
         },
       ],
     },
-    tileTrust: {
-      eyebrow: "Why Rivyl",
-      title: "Why Clients Choose Rivyl",
-      items: [
-        "Tile Flooring Specialists",
-        "Residential & Commercial Experience",
-        "Transparent Quotations",
-        "Trusted Specialist Partners",
-        "Responsive Project Coordination",
-        "Quality Workmanship",
-      ],
-    },
     projectTeam: {
       eyebrow: "Project Team",
       title: "Experienced Project Teams",
@@ -172,6 +160,10 @@ const dictionaries = {
     services: {
       eyebrow: "Services",
       title: "Tile flooring renewal with supporting services",
+      primaryHeading: "Primary Services",
+      primaryCopy: "Tile Flooring Focus",
+      supportingHeading: "Supporting Services",
+      supportingCopy: "Coordinated painting and electrical support when the project scope requires it.",
       imageAlt: "Apartment floor tile surface and skirting finish",
       items: [
         {
@@ -424,18 +416,6 @@ const dictionaries = {
         },
       ],
     },
-    tileTrust: {
-      eyebrow: "Mengapa Rivyl",
-      title: "Mengapa Pelanggan Memilih Rivyl",
-      items: [
-        "Pakar Lantai Jubin",
-        "Pengalaman Kediaman & Komersial",
-        "Sebut Harga Telus",
-        "Rakan Pakar Dipercayai",
-        "Koordinasi Projek Responsif",
-        "Mutu Kerja Berkualiti",
-      ],
-    },
     projectTeam: {
       eyebrow: "Pasukan Projek",
       title: "Pasukan Projek Berpengalaman",
@@ -458,6 +438,10 @@ const dictionaries = {
     services: {
       eyebrow: "Servis",
       title: "Pembaharuan lantai jubin dengan servis sokongan",
+      primaryHeading: "Servis Utama",
+      primaryCopy: "Fokus Lantai Jubin",
+      supportingHeading: "Servis Sokongan",
+      supportingCopy: "Sokongan pengecatan dan elektrik yang dikoordinasi apabila diperlukan dalam skop projek.",
       imageAlt: "Permukaan jubin lantai apartmen dan kemasan skirting",
       items: [
         {

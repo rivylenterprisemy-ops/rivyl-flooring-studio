@@ -36,7 +36,7 @@ export default function WhyRivylSection() {
   const { why } = content
 
   return (
-    <section className="bg-[#f4efe7] px-5 py-16 sm:px-8 sm:py-20 lg:px-10 lg:py-24">
+    <section className="bg-[#f4efe7] px-5 py-14 sm:px-8 sm:py-18 lg:px-10 lg:py-20">
       <div className="mx-auto max-w-7xl">
         <motion.div
           initial={{ opacity: 0, y: 22 }}
