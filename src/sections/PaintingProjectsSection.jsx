@@ -3,8 +3,8 @@ import { motion } from "framer-motion"
 
 import paintingApartmentProject from "@/assets/projects/painting/painting-apartment-project.jpg"
 import paintingHeroFeatureWall from "@/assets/projects/painting/painting-hero-feature-wall.jpg"
-import paintingPoliteknikBuildingView from "@/assets/projects/painting/painting-politeknik-building-view.jpg"
-import paintingRopeAccess from "@/assets/projects/painting/painting-rope-access.jpg"
+import paintingPoliteknikBuildingView from "@/assets/projects/painting/painting-politeknik-building-view-clean.jpg"
+import paintingRopeAccess from "@/assets/projects/painting/painting-politeknik-rope-access.jpg"
 import { useLocale } from "@/lib/i18n"
 
 const galleryImages = [
