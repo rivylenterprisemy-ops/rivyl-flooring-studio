@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "framer-motion"
 
 import LanguageSwitcher from "@/components/LanguageSwitcher"
 import { Button } from "@/components/ui/button"
+import rivylLogo from "@/assets/logo/rivyl-logo.png"
 import { localizeHash, useLocale } from "@/lib/i18n"
 import { cn } from "@/lib/utils"
 
@@ -42,10 +43,16 @@ export default function Navbar() {
       <nav className="mx-auto grid h-20 max-w-7xl grid-cols-[1fr_auto] items-center px-5 sm:px-8 lg:grid-cols-[1fr_auto_1fr] lg:gap-10 xl:px-0">
         <a
           href={localizeHash("#home", path)}
-          className="min-w-0 truncate pr-3 font-['Playfair_Display'] text-[1.15rem] font-normal tracking-wide text-stone-950 transition-colors duration-300 hover:text-stone-700 sm:text-[1.32rem] lg:pr-0"
+          className="flex min-w-0 items-center gap-3 pr-3 font-['Playfair_Display'] text-[1.15rem] font-normal tracking-wide text-stone-950 transition-colors duration-300 hover:text-stone-700 sm:gap-3.5 sm:text-[1.32rem] lg:pr-0"
           aria-label={content.nav.homeAria}
         >
-          Rivyl Flooring Studio
+          <img
+            src={rivylLogo}
+            alt=""
+            className="h-9 w-auto shrink-0 object-contain mix-blend-multiply lg:h-12"
+            aria-hidden="true"
+          />
+          <span className="min-w-0 truncate">Rivyl Flooring Studio</span>
         </a>
 
         <div className="hidden items-center justify-center gap-10 lg:flex">
