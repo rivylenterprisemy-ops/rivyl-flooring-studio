@@ -213,9 +213,9 @@ const dictionaries = {
     },
     areas: {
       eyebrow: "Service Areas",
-      title: "Serving Johor Bahru & Surrounding Areas",
+      title: "Where We Work",
       copy:
-        "We provide flooring, painting and electrical services across Johor Bahru for residential and commercial properties.",
+        "Based in Johor Bahru and serving residential and commercial projects across Johor, with selected projects undertaken throughout Malaysia.",
       serviceAreas: [
         "Johor Bahru",
         "Skudai",
@@ -491,9 +491,9 @@ const dictionaries = {
     },
     areas: {
       eyebrow: "Kawasan Servis",
-      title: "Menyediakan Servis di Johor Bahru & Kawasan Sekitar",
+      title: "Kawasan Kami Beroperasi",
       copy:
-        "Kami menyediakan servis lantai, pengecatan dan elektrik di Johor Bahru untuk hartanah kediaman dan komersial.",
+        "Berpusat di Johor Bahru dan menyediakan servis untuk projek kediaman serta komersial di seluruh Johor, dengan projek terpilih dilaksanakan di seluruh Malaysia.",
       serviceAreas: [
         "Johor Bahru",
         "Skudai",

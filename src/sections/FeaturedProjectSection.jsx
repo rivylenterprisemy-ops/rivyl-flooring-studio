@@ -103,7 +103,7 @@ export default function FeaturedProjectSection() {
           </motion.div>
         </motion.div>
 
-        <div className="mt-10 flex gap-2 overflow-x-auto pb-2 sm:flex-wrap sm:overflow-visible sm:pb-0">
+        <div className="scrollbar-hide mt-10 flex gap-2 overflow-x-auto pb-2 sm:flex-wrap sm:overflow-visible sm:pb-0">
           {portfolio.filters.map((filter) => {
             const isActive = activeFilter === filter
 
