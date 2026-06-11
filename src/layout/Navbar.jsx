@@ -35,8 +35,8 @@ export default function Navbar() {
     <header
       className={cn(
         "fixed inset-x-0 top-0 z-50 transition-all duration-500",
-        isScrolled
-          ? "border-b border-stone-200/60 bg-[#f4efe7]/86 shadow-[0_14px_45px_rgba(39,32,24,0.06)] backdrop-blur-lg"
+        isScrolled || isMenuOpen
+          ? "border-b border-stone-200/60 bg-[#f4efe7] shadow-[0_14px_45px_rgba(39,32,24,0.06)] backdrop-blur-lg"
           : "border-b border-transparent bg-transparent"
       )}
     >
@@ -104,7 +104,7 @@ export default function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.22, ease: "easeOut" }}
-            className="border-t border-stone-200/70 bg-[#f4efe7]/95 px-5 pb-6 pt-3 shadow-[0_22px_55px_rgba(39,32,24,0.1)] backdrop-blur-xl lg:hidden"
+            className="fixed inset-x-0 bottom-0 top-20 z-40 overflow-y-auto border-t border-stone-200/70 bg-[#f4efe7] px-5 pb-8 pt-5 shadow-[0_22px_55px_rgba(39,32,24,0.1)] lg:hidden"
           >
             <div className="mx-auto flex max-w-7xl flex-col gap-1">
               {navItems.map((item) => (
